@@ -56,9 +56,7 @@ Public Class Form1
 
     Private Sub AddFolders(collectionFolders As String)
         For Each collecDirectory As IO.DirectoryInfo In New IO.DirectoryInfo(collectionFolders).GetDirectories()
-            If collecDirectory.Name <> "_manufacturer" Or collecDirectory.Name <> "Main" Then
-                lb_collections.Items.Add(collecDirectory.Name)
-            End If
+            lb_collections.Items.Add(collecDirectory.Name)
         Next
     End Sub
 
